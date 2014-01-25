@@ -9,7 +9,12 @@
             {
                 "user": "vagrant",
                 "rubies": ["1.9.3-p392", "2.0.0-p0"],
-                "global": "1.9.3-p392"
+                "global": "2.0.0-p0",
+                "gems": {
+                    "2.0.0-p0" : [
+                        { "name": "bundler", "version": "1.3.5" }
+                    ]
+                }
             }
         ]
     }
