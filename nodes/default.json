@@ -1,5 +1,6 @@
 {
 	"run_list": [
+		"emacs",
 		"nginx",
 		"ruby_build",
 		"rbenv::user"
