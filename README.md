@@ -1,7 +1,7 @@
 my_chef_repo
 ============
 
-This is the sandbox to learn chef, berkshef, and vagrant.
+This is the sandbox to learn chef, berkshef, serverspec and vagrant.
 
 # Requirements
 
