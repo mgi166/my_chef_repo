@@ -13,6 +13,7 @@ class ServerspecTask < RSpec::Core::RakeTask
   end
 end
 
+task :default => "serverspec:all".to_sym
 namespace :serverspec do
   task :all => attributes.keys.map {|key| 'serverspec:' + key.split('.').first }
   attributes.keys.each do |key|
@@ -20,6 +21,18 @@ namespace :serverspec do
     ServerspecTask.new(key.split('.').first.to_sym) do |t|
       t.target  = key
       t.pattern = 'spec/{' + attributes[key][:roles].join(',') + '}/*_spec.rb'
+    end
+  end
+
+  namespace :debug do
+    attributes.keys.each do |key|
+      desc "Run serverspec to #{key} with argument spec files"
+      ServerspecTask.new(key.split('.').first.to_sym) do |t|
+        raise ArgumentError, 'Please specify the spec file 1 or more.' if ARGV.size == 1
+        spec_files = ARGV.dup.drop(1)
+        t.target  = key
+        t.pattern = '{' + spec_files.join(',') + '}'
+      end
     end
   end
 end

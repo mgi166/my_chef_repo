@@ -24,3 +24,8 @@ All gems and cookbooks is installed under vendor path, so don't pollute your env
 bundle exec knife solo prepare {hostname}
 bundle exec knife solo cook {hostname}
 ```
+
+# Test
+```zsh
+bundle exec rake
+```
