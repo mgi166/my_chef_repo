@@ -1,16 +1,20 @@
 require 'serverspec'
 require 'pathname'
 require 'net/ssh'
+require 'yaml'
 
 include SpecInfra::Helper::Ssh
 include SpecInfra::Helper::DetectOS
 
+attributes = YAML.load_file('spec/server_attributes.yml')
+
 Rspec.configure do |c|
-  c.host  = ENV['TARGET_HOST']
-  options = Net::SSH::Config.for(c.host)
-  user    = options[:user] || Etc.getlogin
-  c.ssh   = Net::SSH.start(c.host, user, options)
-  c.os    = backend.check_os
+  c.host       = ENV['TARGET_HOST']
+  options      = Net::SSH::Config.for(c.host)
+  user         = options[:user] || Etc.getlogin
+  c.ssh        = Net::SSH.start(c.host, user, options)
+  c.os         = backend.check_os
+  set_property   attributes[c.host]
 end
 
 # default description

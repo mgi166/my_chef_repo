@@ -1,20 +1,8 @@
 require 'rake'
 require 'rspec/core/rake_task'
+require 'yaml'
 
-hosts = [
-         {
-           name:  'default',
-           roles: ['proxy']
-         }
-]
-
-hosts = hosts.map do |host|
-  {
-    name:       host[:name],
-    short_name: host[:name].split('.').first,
-    roles:      host[:roles],
-  }
-end
+attributes = YAML.load_file('spec/server_attributes.yml')
 
 class ServerspecTask < RSpec::Core::RakeTask
   attr_accessor :target
@@ -26,12 +14,12 @@ class ServerspecTask < RSpec::Core::RakeTask
 end
 
 namespace :serverspec do
-  task :all => hosts.map {|h| 'serverspec:' + h[:short_name] }
-  hosts.each do |host|
-    desc "Run serverspec to #{host[:name]}"
-    ServerspecTask.new(host[:short_name].to_sym) do |t|
-      t.target  = host[:name]
-      t.pattern = 'spec/{' + host[:roles].join(',') + '}/*_spec.rb'
+  task :all => attributes.keys.map {|key| 'serverspec:' + key.split('.').first }
+  attributes.keys.each do |key|
+    desc "Run serverspec to #{key}"
+    ServerspecTask.new(key.split('.').first.to_sym) do |t|
+      t.target  = key
+      t.pattern = 'spec/{' + attributes[key][:roles].join(',') + '}/*_spec.rb'
     end
   end
 end
