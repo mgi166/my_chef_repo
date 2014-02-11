@@ -1,15 +1,15 @@
 {
-	"run_list": [
-		"emacs",
-		"nginx",
-		"ruby_build",
-		"rbenv::user"
-	],
+    "run_list": [
+        "emacs",
+        "nginx",
+        "ruby_build",
+        "rbenv::user"
+    ],
     "rbenv": {
         "user_installs": [
             {
                 "user": "vagrant",
-                "rubies": ["1.9.3-p392", "2.0.0-p0"],
+                "rubies": ["2.0.0-p0"],
                 "global": "2.0.0-p0",
                 "gems": {
                     "2.0.0-p0" : [
