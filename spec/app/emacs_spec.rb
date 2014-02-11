@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe package('emacs') do
-  it { should be_installed }
+describe command('which emacs') do
+  its(:stdout) { should match /emacs/ }
 end
