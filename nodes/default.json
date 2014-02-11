@@ -1,6 +1,7 @@
 {
     "run_list": [
         "emacs",
+        "selinux::disabled",
         "nginx",
         "ruby_build",
         "rbenv::user"
