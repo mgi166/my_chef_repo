@@ -3,8 +3,7 @@
         "emacs",
         "selinux::disabled",
         "nginx",
-        "ruby_build",
-        "rbenv::user"
+        "services"
     ],
     "rbenv": {
         "user_installs": [

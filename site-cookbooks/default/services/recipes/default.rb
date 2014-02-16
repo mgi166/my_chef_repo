@@ -8,18 +8,18 @@
 #
 
 service_list = <<-SERVICES.lines.map(&:strip)
-          auditd
-          blk-availability
-          mdmonitor
-          iscsid
-          iscsi
-          ip6tables
-          lvm2-monitor
-          netfs
-          nfs
-          nfslock
-          restorecond
-          SERVICES
+                  auditd
+                  blk-availability
+                  mdmonitor
+                  iscsid
+                  iscsi
+                  ip6tables
+                  lvm2-monitor
+                  netfs
+                  nfs
+                  nfslock
+                  restorecond
+                  SERVICES
 
 service_list.each do |srv|
   service srv do
