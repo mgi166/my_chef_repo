@@ -7,6 +7,6 @@ target_host = ENV['TARGET_HOST']
 (attributes[target_host][:disabled_daemons] || []).each do |service|
   describe service(service) do
     it { should_not be_enabled }
-    it { should_not be_running }
+    it { should_not be_running.under('supervisor') }
   end
 end
