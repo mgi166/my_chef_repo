@@ -2,7 +2,7 @@ require 'rake'
 require 'rspec/core/rake_task'
 require 'yaml'
 
-attributes = YAML.load_file('spec/server_attributes.yml')
+attributes = YAML.load_file('./spec/server_attributes.yml')
 
 class ServerspecTask < RSpec::Core::RakeTask
   attr_accessor :target
