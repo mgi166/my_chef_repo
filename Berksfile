@@ -1,8 +1,9 @@
 site :opscode
 
 cookbook 'emacs'
-cookbook 'nginx'
-cookbook 'ruby_build'
+cookbook 'git'
+cookbook 'nodejs'
+cookbook 'npm'
 cookbook 'rbenv', github: 'fnichol/chef-rbenv'
-cookbook 'zabbix'
+cookbook 'ruby_build'
 cookbook 'selinux'
