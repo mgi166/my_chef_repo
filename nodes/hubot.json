@@ -1,0 +1,23 @@
+{
+    "run_list": [
+        "emacs",
+        "selinux::disabled",
+        "ruby_build",
+        "rbenv::user",
+        "services"
+    ],
+    "rbenv": {
+        "user_installs": [
+            {
+                "user": "mgi",
+                "rubies": ["2.1.2"],
+                "global": "2.1.2",
+                "gems": {
+                    "2.1.2" : [
+                        { "name": "bundler", "version": "1.6.4" }
+                    ]
+                }
+            }
+        ]
+    }
+}
