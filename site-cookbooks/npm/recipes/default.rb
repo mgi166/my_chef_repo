@@ -6,3 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+
+npm_package "hubot" do
+  action :install
+end
