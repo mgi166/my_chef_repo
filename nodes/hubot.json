@@ -5,6 +5,7 @@
         "ruby_build",
         "rbenv::user",
         "services",
+        "user",
         "app"
     ],
     "rbenv": {
