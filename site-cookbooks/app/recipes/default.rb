@@ -6,3 +6,9 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+
+directory '/var/app' do
+  action :create
+  owner 'mgi'
+  group 'mgi'
+end

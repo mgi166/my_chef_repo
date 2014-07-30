@@ -4,7 +4,8 @@
         "selinux::disabled",
         "ruby_build",
         "rbenv::user",
-        "services"
+        "services",
+        "app"
     ],
     "rbenv": {
         "user_installs": [
