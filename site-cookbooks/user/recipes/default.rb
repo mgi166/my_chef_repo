@@ -26,5 +26,5 @@ cookbook_file "/home/#{name}/.ssh/authorized_keys" do
   owner name
   group name
   mode '600'
-  source 'id_rsa.pub'
+  source 'authorized_keys'
 end
