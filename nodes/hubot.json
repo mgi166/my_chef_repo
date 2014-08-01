@@ -7,6 +7,7 @@
         "services",
         "user",
         "nodejs",
+        "redisio::install",
         "npm",
         "app"
     ],
@@ -22,6 +23,11 @@
                     ]
                 }
             }
+        ]
+    },
+    "redisio" : {
+        "servers" : [
+            {"name" : "master", "port" : "6379", "unixsocket" : "/tmp/redis.sock", "unixsocketperm" : "755"}
         ]
     }
 }
