@@ -2,10 +2,10 @@
     "run_list": [
         "emacs",
         "selinux::disabled",
+        "user",
         "ruby_build",
         "rbenv::user",
         "services",
-        "user",
         "nodejs",
         "redisio::install",
         "npm",
