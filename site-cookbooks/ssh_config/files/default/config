@@ -1,0 +1,11 @@
+Host bitbucket.org
+     Hostname bitbucket.org
+     User git
+     Port 22
+     IdentityFile ~/.ssh/bitbucket/id_rsa
+     TCPKeepAlive yes
+     IdentitiesOnly yes
+
+Host target-host
+     HostName 54.92.17.177
+     IdentityFile ~/.ssh/target-host/id_rsa

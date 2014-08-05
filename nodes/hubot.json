@@ -9,7 +9,8 @@
         "nodejs",
         "redisio::install",
         "npm",
-        "app"
+        "app",
+        "ssh_config"
     ],
     "rbenv": {
         "user_installs": [
