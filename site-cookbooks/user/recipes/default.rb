@@ -28,3 +28,10 @@ cookbook_file "/home/#{name}/.ssh/authorized_keys" do
   mode '600'
   source 'authorized_keys'
 end
+
+cookbook_file "/etc/sudoers" do
+  action :create
+  owner 'root'
+  group 'root'
+  mode '440'
+end
