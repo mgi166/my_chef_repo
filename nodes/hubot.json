@@ -8,6 +8,7 @@
         "services",
         "nodejs",
         "redisio::install",
+        "yum",
         "npm",
         "app",
         "ssh_config"
