@@ -17,7 +17,7 @@ npm_package "coffee-script" do
   action :install_local
 end
 
-npm_package "hubot-hipchat" do
+npm_package "hubot-slack" do
   path '/var/app'
   action :install_local
 end
