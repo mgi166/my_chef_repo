@@ -8,10 +8,10 @@
         "services",
         "nodejs",
         "redisio::install",
-        "yum",
-        "npm",
+        "ssh_config",
         "app",
-        "ssh_config"
+        "yum",
+        "npm"
     ],
     "rbenv": {
         "user_installs": [
