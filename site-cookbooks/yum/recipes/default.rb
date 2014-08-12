@@ -7,6 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-yum_package "libicu-devel.x86_64" do
+yum_package "libicu-devel" do
   action :install
 end
