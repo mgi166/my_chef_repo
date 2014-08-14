@@ -29,12 +29,13 @@ cookbook_file "/home/#{name}/.ssh/bitbucket/id_rsa" do
   source 'bitbucket.id_rsa'
 end
 
-# cookbook_file "/home/#{name}/.ssh/target-host/id_rsa" do
-#   action :create
-#   owner  name
-#   mode  '600'
-#   group  name
-# end
+cookbook_file "/home/#{name}/.ssh/target-host/id_rsa" do
+  action :create
+  owner  name
+  group  name
+  mode  '600'
+  source 'target-host.id_rsa'
+end
 
 cookbook_file "/home/#{name}/.ssh/config" do
   action :create

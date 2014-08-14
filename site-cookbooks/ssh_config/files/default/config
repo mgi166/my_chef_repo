@@ -7,5 +7,6 @@ Host bitbucket.org
      IdentitiesOnly yes
 
 Host target-host
-     HostName 54.92.17.177
+     HostName xxx.xxx.xxx.xxx
+     User root
      IdentityFile ~/.ssh/target-host/id_rsa
