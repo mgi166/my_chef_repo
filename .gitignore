@@ -1,3 +1,4 @@
 /cookbooks/
 vendor/
 Berksfile.lock
+data_bag_key
