@@ -1,0 +1,15 @@
+{
+  "id": "dev",
+  "group": {
+    "encrypted_data": "83Yv/yBr/cXIsmvCG420khLdpW3yWTt4LYRJGJBXvp8=\n",
+    "iv": "VQ1kg35EdQROFiOhLTGoQA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "password": {
+    "encrypted_data": "UsLoB3LwBfvsDyDjbfLuE4OTtS6q5k03cznS1d6QfVA=\n",
+    "iv": "gUDMqOu0IPGrSaJuScebMg==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

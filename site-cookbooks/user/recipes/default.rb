@@ -9,10 +9,10 @@
 
 include_recipe 'group'
 
-# data = Chef::EncryptedDataBagItem.load('user', 'mgi')
+data = Chef::EncryptedDataBagItem.load('encrypted_user', 'dev')
 
-# user data['id'] do
-#   action   :create
-#   group    data['group']
-#   password `openssl passwd -1 #{data['password']}`.chomp
-# end
+user data['id'] do
+  action   :create
+  group    data['group']
+  password `openssl passwd -1 #{data['password']}`.chomp
+end
