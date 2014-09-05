@@ -1,15 +1,5 @@
 {
   "id": "mgi",
-  "password": {
-    "encrypted_data": "RciPmrsTqhw0mhaaFn9UaIbqsqzxBvYRKpGHEnPQSyg=\n",
-    "iv": "Cv5Wkyon+Ncje1KevGr8qQ==\n",
-    "version": 1,
-    "cipher": "aes-256-cbc"
-  },
-  "group": {
-    "encrypted_data": "2l6KB8EGy5l5zCYfvMffieDTQP0dz9zVepnVeeDoLZ8=\n",
-    "iv": "dvxtsDYYDUthHY+ctLliyA==\n",
-    "version": 1,
-    "cipher": "aes-256-cbc"
-  }
+  "group": "developer",
+  "password": "$1$IacppJXn$K0Y/uqEEDESWFyI.4P/mx."
 }

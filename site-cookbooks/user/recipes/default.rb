@@ -16,3 +16,13 @@ user data['id'] do
   group    data['group']
   password `openssl passwd -1 #{data['password']}`.chomp
 end
+
+users = data_bag('user')
+users.each do |user_id|
+  u = data_bag_item('user', user_id)
+  user u['id'] do
+    action   :create
+    group    u['group']
+    password u['password']
+  end
+end
