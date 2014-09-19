@@ -7,6 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
+include_recipe 'group'
+
 template '/etc/sudoers' do
   action :create
   mode   '0440'
