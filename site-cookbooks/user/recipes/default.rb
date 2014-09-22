@@ -25,7 +25,7 @@ users.each do |user_id|
       group  u['id']
     end
 
-    file "/home/#{u['id']}/authorized_keys" do
+    file "/home/#{u['id']}/.ssh/authorized_keys" do
       action :create
       owner  u['id']
       mode   '0600'
